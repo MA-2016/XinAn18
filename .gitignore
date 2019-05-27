@@ -1,0 +1,8 @@
+.attach_pid*
+.mvn/
+*.pyc
+mvnw*
+.vscode/
+target/
+.node_modules/
+# build/

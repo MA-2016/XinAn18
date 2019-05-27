@@ -1,0 +1,6 @@
+mvn dependency:copy-dependencies
+mvn assembly:single
+mvn package assembly:single
+mvn test -Dtest=classname
+mvn -DskipTests
+1.ip

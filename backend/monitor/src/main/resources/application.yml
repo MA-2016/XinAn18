@@ -1,0 +1,12 @@
+
+server:
+  port: 8080
+
+spring:
+  jmx:
+    default-domain: SecurityAnalyse
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/SecurityAnalyse?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
