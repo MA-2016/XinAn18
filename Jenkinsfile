@@ -7,6 +7,7 @@ pipeline {
                 // TODO: handle exception
                 echo 'Building ...'
                 sh label: '', script: 'cd backend/monitor'
+                sh label: '', script: 'dir'
                 sh label: '', script: 'mvn package -DskipTests'
             }
         }
