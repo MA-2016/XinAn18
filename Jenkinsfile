@@ -6,9 +6,7 @@ pipeline {
             steps {
                 // TODO: handle exception
                 echo 'Building ...'
-                sh label: '', script: 'cd backend/monitor'
-                sh label: '', script: 'dir'
-                sh label: '', script: 'mvn package -DskipTests'
+                sh label: '', script: 'cd backend/monitor && mvn package -DskipTests'
             }
         }
         stage('Test') {
@@ -19,7 +17,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying ...'
-                sh label: '', script: 'cp target/SecurityAnalyse.war /usr/tomcat9/webapps/'
+                sh label: '', script: 'cd backend/monitor && cp target/SecurityAnalyse.war /usr/tomcat9/webapps/'
             }
         }
     }
